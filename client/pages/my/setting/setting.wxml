@@ -1,0 +1,9 @@
+<!--pages/my/setting/setting.wxml-->
+<view class='container'>
+  <view wx:for="{{array}}" wx:for-index="idx" wx:for-item="itemName">
+    <view class='box'><view class='content'>{{itemName.message}}</view><view class="with_arrow"></view> </view>
+  </view>
+  <view class='btn'>
+    <button class="weui-btn" type="warn">重新授权登录</button>
+  </view>
+</view>

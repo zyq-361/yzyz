@@ -1,0 +1,6 @@
+<!--pages/msg/sysmsg/sysmsg.wxml-->
+<view class='container'>
+<image></image>
+<view>消息提醒</view>
+<view class='intro'>暂无新消息</view>
+</view>

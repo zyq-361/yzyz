@@ -1,0 +1,13 @@
+/* pages/index/zhifu/zhifu.wxss */
+page{
+    background-color: #F8F8F8;
+    font-size: 75%;
+    font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+
+
+.information{
+    margin-top: 12px;
+    justify-content: center;
+    align-items:center;
+}

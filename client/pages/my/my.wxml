@@ -1,0 +1,46 @@
+<!--pages/my/my.wxml-->
+<view class="container">
+	<view class="userinfo">
+		<image wx:if="{{userInfo.avatarUrl}}" class="userinfo-avatar" src="{{ userInfo.avatarUrl }}"></image>
+    <image wx:else class="userinfo-avatar" src="{{unLogin}}"/>
+    <view class='userinfo-nickname'>{{userInfo.nickName}}</view>
+	</view>
+  <view style="height:15rpx;background: #eee;width:100%;"></view>
+  <view class="order" catchtap="toOrder">
+    <text class="myorder-text">我的订单</text>
+    <text class="myorderlook-text">查看全部订单</text>
+  </view>
+
+  
+  <view class="line"></view>
+  
+ 
+  <view class="navs">
+    <block wx:for-items="{{orderItems}}" wx:key="name">
+      <view class="nav-item" bindtap="toOrder" data-type="{{item.name}}" data-typeid="{{item.typeId}}">
+        <image src="{{item.imageurl}}" class="nav-image" />
+        <text>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+ 
+
+  <view style="height:15rpx;background: #eee;width:100%;"></view>
+
+
+  <view class="info_list">
+    <block wx:for="{{userListInfo}}" wx:key="{{item.id}}">
+          <view class="weui_cell" bindtap='goDetails' data-id='{{item.url}}'>
+            <view class="weui_cell_hd"><image src="{{item.icon}}"></image></view>
+            <view class="weui_cell_bd">
+                <view class="weui_cell_bd_p"> {{item.text}} </view>
+            </view>
+            <view wx:if="{{item.isunread}}" class="badge">{{item.unreadNum}}</view>
+            <view class="with_arrow"></view> 
+          </view>
+    </block>
+  </view>
+
+  <view class="separate"></view>
+</view>
+

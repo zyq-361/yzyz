@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/order/order",
+    "pages/my/my",
+    "pages/order/xiangqing/xiangqing",
+    "pages/home/xdxq/xdxq",
+    "pages/home/fwxq/fwxq",
+    "pages/home/zhifu/zhifu",
+    "pages/my/msg/msg",
+    "pages/my/setting/setting",
+    "pages/my/support/support",
+    "pages/my/feedback/feedback",
+    "pages/my/msg/sysmsg/sysmsg",
+    "pages/my/chat/chat"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFA500",
+    "navigationBarTitleText": "游则悠哉",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#FFA500",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/icons/shouye.png",
+        "selectedIconPath": "/icons/shouye_s.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "/icons/order.png",
+        "selectedIconPath": "/icons/order_s.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/icons/geren.png",
+        "selectedIconPath": "/icons/geren_s.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

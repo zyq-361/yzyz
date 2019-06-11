@@ -1,0 +1,16 @@
+<!--pages/msg/msg.wxml-->
+<view>
+  <view class='msg_default'>
+  
+  </view>
+  <view class="msg_list">
+    <block wx:for="{{msgListInfo}}" wx:key="{{item.id}}">
+          <view class="weui_cell" bindtap='goDetails' data-id='{{item.url}}'>
+            <view class="weui_cell_hd"><image src="{{item.icon}}"></image></view>
+            <view class="weui_cell_bd">
+                <view class="weui_cell_bd_p"> {{item.text}} </view>
+            </view>
+          </view>
+    </block>
+  </view>
+</view>

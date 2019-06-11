@@ -1,0 +1,23 @@
+<view class="container">
+  <swiper
+  indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}"
+  duration="{{duration}}" circular="{{circular}}">
+    <block wx:for="{{imgUrls}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="top_nav">
+    <view class="head">{{service.title}}</view>  
+    <view class="price">{{service.price}}</view>
+  </view>
+  <view class="line"></view>
+  <view class="service">
+      <image src="{{service.fwts_img}}" />
+  </view>
+  <view bindtap="goOrder" class="reserve">
+    <button type="primary" class="btn" data-id="{{idx}}">立即预定</button>
+  </view>
+</view>

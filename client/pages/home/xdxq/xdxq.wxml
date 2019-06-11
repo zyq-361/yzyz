@@ -1,0 +1,59 @@
+<view class='container'>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}"
+  interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+    <block wx:for="{{imgUrls}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+
+  <view class='dyCard'>
+    <view class="above">
+      <image src="{{dyDetails.avatar}}" class="left" />
+      <view class="detail">
+        <view class="top">
+        {{dyDetails.guidename}} 
+        <image src="{{star}}" />
+        <image src="{{star}}" />
+        <image src="{{star}}" />
+        <image src="{{star}}" />
+        <image src="{{star}}" />
+        </view>
+        <view class="mid">
+        {{dyDetails.summary}}
+       
+        </view>
+        <view class="bottom">{{dyDetails.skill}}</view>
+      </view>
+    </view>
+    <view class="line"></view>
+    <view class="bellow">
+    <image src="{{auth_img}}"/>{{dyDetails.auth_list}}
+    </view>
+  </view>
+
+  <view style="height:15rpx;background: #eee;width:100%;"></view>
+
+  <view class='fwCards'>
+    <view class="title">TA的服务</view>
+    <view class="line"></view>
+    <block wx:for="{{fwCards}}" wx:key="item.id">
+      <view class="fwCard" bindtap="goServiceDetails"  data-id="{{index}}">
+        <view class="left"><image src="{{item.bg_img}}" /></view>
+        <view class="right">
+          <view class="summary">{{item.title}}</view>
+          <view class="price">{{item.price}}起</view>
+        </view>
+        <view class="line"></view>      
+      </view>
+    </block>
+  </view>
+
+  <view class="consult">
+    <button class="btn" type="primary" bindtap="goConsult">
+      咨询TA
+    </button>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+<!--pages/my/support/support.wxml-->
+<view class="weui_cell">
+  <view class="weui_cell_hd" bindtap="openAlert">客服电话：400-258-7396</view>
+</view>

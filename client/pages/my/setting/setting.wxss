@@ -1,0 +1,41 @@
+/* pages/my/setting/setting.wxss */
+page {
+  height: 100%;
+  background-color: #F2f2f2;}
+.container {
+  background-color: #F2f2f2;
+}
+
+
+.box{
+    position: relative;
+    display: flex;
+    padding: 5%;
+    border-bottom: 1px solid #dadada;
+}
+.content{
+  width: 25%;
+  line-height: 40rpx;
+  height: 40rpx;
+  text-align: left;
+  color: black;
+  font-size: 36rpx;
+  /* border: 1px solid black; */
+}
+.with_arrow{
+width: 10px;
+height: 10px;
+display: flex;
+border-top: 2px solid #999;
+border-right: 2px solid #999;
+position: absolute;
+right: 40rpx;
+transform: rotate(45deg);
+margin-top:25rpx;
+}
+
+.btn{
+  position: fixed;
+  bottom: 250px;
+  width: 100%;
+}

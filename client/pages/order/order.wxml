@@ -1,0 +1,72 @@
+<view class="page">
+<view class="page__bd">
+<view class="weui-tab">
+  <view class="weui-navbar">
+  <block wx:for="{{tabs}}" wx:key="*this">
+    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+      <view class="weui-navbar__title">{{item}}</view>
+    </view>
+  </block>
+
+  <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+  </view>
+
+  <!-- <view class="weui-tab__panel"> -->
+    <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+    <view hidden="{{have_storage}}">
+      <view class='weui_cell_hd'><image src='{{imgURL}}'></image></view>
+      <view class='weui_cell_bd'>
+        <view class="weui_cell_bd_p">还是空空哒~</view>
+      </view> 
+    </view>
+    <view hidden="{{!have_storage}}">
+      <view class="orderDetails" bindtap="goXingqing">
+        <view class="orderListTitle">
+           <text class="userName">{{waitPayOrder.placename}}</text>
+          <text class="orderStatus">{{state}}</text>
+        </view>
+        <view class="orderListDetails">
+          <view class="productImg">
+            <image src="{{waitPayOrder.bg_img}}" background-size="cover"></image>
+          </view>
+          <view class="productInfo">
+            <view class="productTitle">预定时间: {{waitPayOrder.date}}</view>
+            <text class="productPrice">当前状态：{{status}}</text>
+          </view>
+        </view>
+        <view class="productCount">
+          <view>
+             <text>合计：￥{{waitPayOrder.price}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    </view>
+
+    <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+      <view class='weui_cell_hd'><image src='{{imgURL}}'></image></view>
+      <view class='weui_cell_bd'>
+          <view class="weui_cell_bd_p">还是空空哒~</view>       
+      </view>                          
+    </view>
+
+    <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+      <view class='weui_cell_hd'><image src='{{imgURL}}'></image></view>
+      <view class='weui_cell_bd'>
+        <view class="weui_cell_bd_p">还是空空哒~</view>   
+      </view>              
+    </view>
+
+    <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+      <view class='weui_cell_hd'><image src='{{imgURL}}'></image></view>
+      <view class='weui_cell_bd'>
+        <view class="weui_cell_bd_p">还是空空哒~</view>  
+      </view>              
+    </view>
+            <!-- </view> -->
+        </view>
+    </view>
+</view>
+
+
+
